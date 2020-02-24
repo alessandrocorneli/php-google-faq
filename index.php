@@ -29,15 +29,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <?php foreach ($db as $domanda => $array_risposte) { ?>
-      <h1><?php echo $domanda; ?></h1>
-      <?php foreach ($array_risposte as $risposta) { ?>
-        <?php echo $risposta[0]; ?>
+    <div class="nav">
+      <img src="img/unnamed.png" height="25px" alt="">
+      <h2>Domande frequenti</h2>
+    </div>
+    <div class="main">
+      <?php foreach ($db as $domanda => $array_risposte) { ?>
+        <h1><?php echo $domanda; ?></h1>
+        <?php foreach ($array_risposte as $risposta) { ?>
+          <?php echo $risposta[0]; ?>
+        <?php } ?>
       <?php } ?>
-    <?php } ?>
+    </div>
   </body>
 </html>
